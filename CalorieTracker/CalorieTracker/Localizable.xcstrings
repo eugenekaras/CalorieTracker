@@ -1,0 +1,206 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " " : {
+
+    },
+    "Facebook" : {
+
+    },
+    "Female" : {
+
+    },
+    "Friend or family" : {
+
+    },
+    "gender_question_subtitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This will be used to calibrate your custom plan"
+          }
+        }
+      }
+    },
+    "gender_question_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose your Gender"
+          }
+        }
+      }
+    },
+    "Google" : {
+
+    },
+    "Instagram" : {
+
+    },
+    "intro_buttom_text1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purchased on the web?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai acquistato sul web?"
+          }
+        }
+      }
+    },
+    "intro_buttom_text2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign In"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registrazione"
+          }
+        }
+      }
+    },
+    "intro_subtitle1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Just snap a quick photo of your meal and we’ll do the rest"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Basta scattare una foto veloce del tuo pasto e noi faremo il resto"
+          }
+        }
+      }
+    },
+    "intro_subtitle2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We will keep your informed about your food choices and their nutritional content"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ti terremo informato sulle tue scelte alimentari e sul loro contenuto nutrizionale"
+          }
+        }
+      }
+    },
+    "intro_subtitle3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today is the best time to start working toward your dream body"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oggi è il momento migliore per iniziare a lavorare per ottenere il corpo dei tuoi sogni"
+          }
+        }
+      }
+    },
+    "intro_title1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calorie tracking made easy"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il monitoraggio delle calorie reso semplice"
+          }
+        }
+      }
+    },
+    "intro_title2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In-dept nutrition analyses"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Analisi nutrizionale approfondita"
+          }
+        }
+      }
+    },
+    "intro_title3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transform your body"
+          }
+        }
+      }
+    },
+    "Male" : {
+
+    },
+    "onboarding_button_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        }
+      }
+    },
+    "Other" : {
+
+    },
+    "PaywallView" : {
+
+    },
+    "SplashView" : {
+
+    },
+    "There we go!" : {
+
+    },
+    "TikTok" : {
+
+    },
+    "TV" : {
+
+    },
+    "Youtube" : {
+
+    }
+  },
+  "version" : "1.0"
+}
