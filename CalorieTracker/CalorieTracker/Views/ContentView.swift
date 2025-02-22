@@ -23,6 +23,7 @@ struct ContentView: View {
 //    @State private var isOnboardingCompleted: Bool = false
     @State private var contentType: ContentType = .splashView
     @State private var paywallNeedToBeShown: Bool = true
+    @State private var doWeNeedShowPaywall: Bool = false
     
     //MARK: - View assembling
     var body: some View {
@@ -52,10 +53,11 @@ struct ContentView: View {
     private func updateContentViewState() {
         guard isOnboardingCompleted else {
             withAnimation { contentType = .onboarding }
+            doWeNeedShowPaywall = true
             return
         }
         
-        if paywallNeedToBeShown {
+        if paywallNeedToBeShown && doWeNeedShowPaywall {
             withAnimation { contentType = .paywall }
             return
         }
