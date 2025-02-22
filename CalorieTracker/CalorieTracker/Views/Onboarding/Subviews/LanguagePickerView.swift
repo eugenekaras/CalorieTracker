@@ -40,7 +40,7 @@ struct LanguagePickerView: View {
     func changeLanguageButton(to language: LanguageRegion) -> some View {
         Button(action: {
             changeLanguage(to: language)
-            
+            vibration()
             withAnimation(.easeInOut(duration: 0.5)) {
                 isPresented = false
             }
@@ -70,6 +70,10 @@ struct LanguagePickerView: View {
     
     private func changeLanguage(to language: LanguageRegion) {
         languageManager.changeLanguage(to: language.rawValue)
+    }
+    
+    private func vibration() {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
 }
 

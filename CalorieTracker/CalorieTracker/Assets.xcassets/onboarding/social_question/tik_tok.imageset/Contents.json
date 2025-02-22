@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "man_2.jpg",
+      "filename" : "Tiktok Fill.pdf",
       "idiom" : "universal"
     }
   ],
@@ -10,7 +10,7 @@
     "version" : 1
   },
   "properties" : {
-    "localizable" : true,
-    "preserves-vector-representation" : true
+    "preserves-vector-representation" : true,
+    "template-rendering-intent" : "template"
   }
 }

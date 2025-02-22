@@ -13,6 +13,8 @@ extension Color {
         static let onboarding = Color.white
         static let onboardingDivider = Color.gray
         static let changeLanguagePopup = Color.white
+        static let icon = Color.white
+        static let signInt = Color.white
     }
     
     enum text {
@@ -28,5 +30,7 @@ extension Color {
         static let unselectedQuestion = Color("background/changeLanguageButton")
         static let changeLanguage = Color("background/changeLanguageButton")
         static let onboarding = Color.black
+        static let back = Color("background/back")
+        static let signInt = Color.black
     }
 }

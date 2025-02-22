@@ -51,6 +51,7 @@ extension IntroductionView {
 struct IntroductionView: View {
     //MARK: - States
     @State private var introductionStep: IntroductionStep = .step1
+    @Binding var showSignIn: Bool
 
     //MARK: - View assembling
     var body: some View {
@@ -67,7 +68,7 @@ struct IntroductionView: View {
                     
                     pageIndicator
                     
-                    purchasedInfoView
+                    signInButton
                         .padding(EdgeInsets(top: 6, leading: 20, bottom: 20, trailing: 20))
                 }
                 .frame(width:UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.45)
@@ -90,7 +91,7 @@ struct IntroductionView: View {
     private var headerView: some View {
         TabView(selection: $introductionStep) {
             ForEach([IntroductionStep.step1, .step2, .step3], id: \.self) { step in
-                VStack(alignment: .center) {
+                VStack(alignment: .center, spacing: 6) {
                     Text(step.title)
                         .font(.title).bold()
                         .foregroundStyle(Color.text.introTitle)
@@ -101,7 +102,7 @@ struct IntroductionView: View {
                         .font(.subheadline)
                         .foregroundStyle(Color.text.introSubtitle)
                         .multilineTextAlignment(.center)
-                        .padding(EdgeInsets(top: 3, leading: 20, bottom: 0, trailing: 20))
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                     
                     Spacer()
             
@@ -124,7 +125,16 @@ struct IntroductionView: View {
         .animation(.easeInOut(duration: 0.3), value: introductionStep)
     }
     
-    private var purchasedInfoView: some View {
+    private var signInButton: some View {
+        Button {
+            showSignIn = true
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        } label: {
+            signInButtonView
+        }
+    }
+    
+    private var signInButtonView: some View {
         Group {
             Text("intro_buttom_text1")
                 .font(.subheadline) +
@@ -139,5 +149,5 @@ struct IntroductionView: View {
 }
 
 #Preview {
-    IntroductionView()
+    IntroductionView(showSignIn: .constant(false))
 }

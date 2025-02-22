@@ -4,14 +4,65 @@
     " " : {
 
     },
+    "0-2" : {
+
+    },
+    "3-5" : {
+
+    },
+    "6+" : {
+
+    },
+    "A few workouts per week" : {
+
+    },
+    "and" : {
+
+    },
+    "By continuing you agree to Cal AI's" : {
+
+    },
+    "Continue with email" : {
+
+    },
+    "Dedicated athlete" : {
+
+    },
     "Facebook" : {
 
     },
     "Female" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Femmina"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dişi"
+          }
+        }
+      }
     },
     "Friend or family" : {
-
+      "extractionState" : "stale",
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amico o familiare"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arkadaş veya aile"
+          }
+        }
+      }
     },
     "gender_question_subtitle" : {
       "localizations" : {
@@ -19,6 +70,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "This will be used to calibrate your custom plan"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo verrà utilizzato per calibrare il tuo piano personalizzato"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu, özel planınızı kalibre etmek için kullanılacaktır"
           }
         }
       }
@@ -30,11 +93,20 @@
             "state" : "translated",
             "value" : "Choose your Gender"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli il tuo genere"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cinsiyetinizi seçin"
+          }
         }
       }
-    },
-    "Google" : {
-
     },
     "Instagram" : {
 
@@ -52,6 +124,12 @@
             "state" : "translated",
             "value" : "Hai acquistato sul web?"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Web'den mi satın aldınız?"
+          }
         }
       }
     },
@@ -67,6 +145,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Registrazione"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oturum aç"
           }
         }
       }
@@ -84,6 +168,12 @@
             "state" : "translated",
             "value" : "Basta scattare una foto veloce del tuo pasto e noi faremo il resto"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yemeğinizin hızlı bir fotoğrafını çekin, gerisini biz halledelim"
+          }
         }
       }
     },
@@ -99,6 +189,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ti terremo informato sulle tue scelte alimentari e sul loro contenuto nutrizionale"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gıda tercihleriniz ve besin içerikleri hakkında sizi bilgilendireceğiz"
           }
         }
       }
@@ -116,6 +212,12 @@
             "state" : "translated",
             "value" : "Oggi è il momento migliore per iniziare a lavorare per ottenere il corpo dei tuoi sogni"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hayalinizdeki vücuda kavuşmak için çalışmaya başlamak için en iyi zaman bugün"
+          }
         }
       }
     },
@@ -131,6 +233,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Il monitoraggio delle calorie reso semplice"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalori takibi kolaylaştırıldı"
           }
         }
       }
@@ -148,6 +256,12 @@
             "state" : "translated",
             "value" : "Analisi nutrizionale approfondita"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Derinlemesine beslenme analizi"
+          }
         }
       }
     },
@@ -158,11 +272,39 @@
             "state" : "translated",
             "value" : "Transform your body"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trasforma il tuo corpo"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vücudunuzu dönüştürün"
+          }
         }
       }
     },
-    "Male" : {
+    "long_term_results_title" : {
 
+    },
+    "Male" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maschio"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erkek"
+          }
+        }
+      }
     },
     "onboarding_button_title" : {
       "localizations" : {
@@ -175,27 +317,80 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Next"
+            "value" : "Sonraki"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonraki"
           }
         }
       }
     },
     "Other" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altro"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diğer"
+          }
+        }
+      }
     },
     "PaywallView" : {
+
+    },
+    "Privacy Policy" : {
+
+    },
+    "Sign In" : {
+
+    },
+    "Sign in with Apple" : {
+
+    },
+    "Sign in with Google" : {
 
     },
     "SplashView" : {
 
     },
-    "There we go!" : {
+    "Terms and Conditions" : {
 
+    },
+    "There we go!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ecco fatto!"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İşte oldu!"
+          }
+        }
+      }
     },
     "TikTok" : {
 
     },
-    "TV" : {
+    "workout_question_subtitle" : {
+
+    },
+    "workout_question_title" : {
+
+    },
+    "Workouts now and then" : {
 
     },
     "Youtube" : {

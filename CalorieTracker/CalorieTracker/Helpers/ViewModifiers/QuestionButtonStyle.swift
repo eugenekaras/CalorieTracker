@@ -14,7 +14,7 @@ struct QuestionButtonStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .background(selected ? Color.button.selectedQuestion : Color.button.unselectedQuestion)
-            .cornerRadius(10)
+            .cornerRadius(12)
             .foregroundStyle(selected ? Color.button.unselectedQuestion : Color.button.selectedQuestion)
             .scaleEffect(selected && isPressed ? 0.95 : 1.0)
             .animation(.easeInOut(duration: 0.3), value: isPressed)

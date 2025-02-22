@@ -11,10 +11,18 @@ struct GenderQuestionsView: View {
     //MARK: - States
     @Binding var selectedQuestion: GenderQuestion?
     @State private var isPressed = false
+    @State private var visibleQuestions: [Bool]
     
+    //MARK: - Initializator
+    init(selectedQuestion: Binding<GenderQuestion?>) {
+         _selectedQuestion = selectedQuestion
+         _visibleQuestions = State(initialValue: Array(repeating: false, count: GenderQuestion.allCases.count))
+     }
+    
+    //MARK: - View assembling
     var body: some View {
         VStack(spacing: 12) {
-            ForEach(GenderQuestion.allCases, id: \.self) { question in
+            ForEach(Array(GenderQuestion.allCases.enumerated()), id: \.element) { index, question in
                 HStack {
                     Spacer()
                     
@@ -42,6 +50,12 @@ struct GenderQuestionsView: View {
                     ),
                     isPressed: $isPressed
                 )
+                .scaleEffect(visibleQuestions[index] ? 1.0 : 0.95)
+                .opacity(visibleQuestions[index] ? 1 : 0)
+                .animation(.easeIn(duration: 0.5).delay(Double(index) * 0.3), value: visibleQuestions[index])
+                .onAppear {
+                    visibleQuestions[index] = true
+                }
             }
         }
     }

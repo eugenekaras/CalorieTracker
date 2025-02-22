@@ -8,32 +8,12 @@
 import SwiftUI
 
 extension OnboardingView {
-    enum OnboardingStep {
-        case introduction
+    enum OnboardingStep: Int, CaseIterable  {
+        case introduction = 0
         case genderQuestions
         case workoutQuestions
-        
-        var title: LocalizedStringKey {
-            switch self {
-            case .introduction:
-                return "intro_title1"
-            case .genderQuestions:
-                return "intro_title2"
-            case .workoutQuestions:
-                return "intro_title3"
-            }
-        }
-        
-        var subtitle: LocalizedStringKey {
-            switch self {
-            case .introduction:
-                return "intro_subtitle1"
-            case .genderQuestions:
-                return "intro_subtitle2"
-            case .workoutQuestions:
-                return "intro_subtitle3"
-            }
-        }
+        case socialQuestions
+        case longTermResults
     }
 }
 
@@ -43,24 +23,54 @@ struct OnboardingView: View {
     
     //MARK: - States
     @State private var showLanguagePicker = false
+    @State private var showSignIn = false
     @State private var onboardingStep: OnboardingStep = .introduction
     @State private var genderQuestion: GenderQuestion?
+    @State private var workoutQuestion: WorkoutQuestion?
+    @State private var socialQuestion: SocialQuestion?
     
     //MARK: - Callbacks
     let completionHandler: () -> Void
     
+    //MARK: -
+    private var progress: Double {
+        Double(onboardingStep.rawValue) / Double(OnboardingStep.allCases.count)
+    }
+    
+    private var isNextEnabled: Bool {
+        switch onboardingStep {
+        case .introduction:
+            return true
+        case .genderQuestions:
+            return genderQuestion != nil
+        case .workoutQuestions:
+            return workoutQuestion != nil
+        case .socialQuestions:
+            return socialQuestion != nil
+        case .longTermResults:
+            return true
+        }
+    }
+    
     //MARK: - View assembling
     var body: some View {
-        VStack(spacing: 0) {
+        VStack {
+            if onboardingStep != .introduction {
+                headerView
+            }
             
             Group {
                 switch onboardingStep {
                 case .introduction:
-                    IntroductionView()
+                    IntroductionView(showSignIn: $showSignIn)
                 case .genderQuestions:
                     genderQuestionView
                 case .workoutQuestions:
-                    IntroductionView()
+                    workoutQuestionView
+                case .socialQuestions:
+                    socialQuestionsView
+                case .longTermResults:
+                    longTermResultsView
                 }
             }
 
@@ -76,8 +86,8 @@ struct OnboardingView: View {
                     Spacer ()
                     
                     selectedLanguageButton
-                        .padding(EdgeInsets(top: 52, leading: 20, bottom: 52, trailing: 20))
-                        .opacity([OnboardingStep.introduction, .genderQuestions].contains(onboardingStep) ? 1 : 0)
+                        .padding(EdgeInsets(top: 51, leading: 20, bottom: 0, trailing: 20))
+                        .opacity([OnboardingStep.introduction].contains(onboardingStep) ? 1 : 0)
                         
                 }
                 Spacer ()
@@ -94,7 +104,49 @@ struct OnboardingView: View {
             }
         )
         .background(Color.backround.onboarding)
+        .sheet(isPresented: $showSignIn) {
+            SignInViewView()
+                .presentationDetents([.fraction(0.50)])
+                .presentationDragIndicator(.hidden)
+                .presentationCornerRadius(10)
+        }
         .ignoresSafeArea()
+    }
+    
+    private var headerView: some View {
+        HStack(spacing: 16) {
+            backButton
+            
+            progressView
+            
+            if onboardingStep == .genderQuestions {
+                selectedLanguageButton
+            }
+        }
+        .padding(EdgeInsets(top: 51, leading: 20, bottom: 0, trailing: 20))
+    }
+    
+    private var progressView: some View {
+        ProgressView(value: progress, total: 1.0)
+            .tint(Color.text.introTitle)
+    }
+    
+    private var backButton: some View {
+        Button {
+            showBackPage()
+        } label: {
+            backButtonView
+        }
+    }
+    
+    private var backButtonView: some View {
+        Color.button.back
+            .frame(width: 37, height: 37)
+            .clipShape(Circle())
+            .overlay {
+                Image(systemName: "arrow.backward")
+                    .foregroundColor(.text.introTitle)
+            }
     }
     
     private var selectedLanguageButton: some View {
@@ -126,6 +178,8 @@ struct OnboardingView: View {
         } label: {
             nextButtonView
         }
+        .disabled(!isNextEnabled)
+        .opacity(!isNextEnabled ? 0.5 : 1)
     }
     
     private var nextButtonView: some View {
@@ -133,7 +187,7 @@ struct OnboardingView: View {
             Spacer()
             
             Text("onboarding_button_title")
-                .font(.system(size: 22, weight: .semibold))
+                .font(.subheadline).bold()
                 .foregroundStyle(Color.text.onboardingButtonTitle)
             
             Spacer()
@@ -152,6 +206,36 @@ struct OnboardingView: View {
         }
     }
     
+    private var workoutQuestionView: some View {
+        QuestionsView(
+            title: "workout_question_title",
+            subTitle: "workout_question_subtitle"
+        ) {
+            WorkourQuestionsView(selectedQuestion: $workoutQuestion)
+        }
+    }
+    
+    private var socialQuestionsView: some View {
+        QuestionsView(
+            title: "workout_question_title",
+            subTitle: "workout_question_subtitle"
+        ) {
+            SocialQuestionView(selectedQuestion: $socialQuestion)
+        }
+    }
+    
+    private var longTermResultsView: some View {
+        QuestionsView(
+            title: "long_term_results_title",
+            subTitle: nil
+        ) {
+            Image("onboarding/intro_your_weight")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .cornerRadius(10)
+        }
+    }
+    
     //MARK: - Actions
     private func showNextPage() {
         withAnimation(.easeInOut(duration: 0.5)) {
@@ -161,18 +245,59 @@ struct OnboardingView: View {
             case .genderQuestions:
                 onboardingStep = .workoutQuestions
             case .workoutQuestions:
+                onboardingStep = .socialQuestions
+            case .socialQuestions:
+                onboardingStep = .longTermResults
+            case .longTermResults:
                 completionHandler()
             }
         }
         
         vibration()
     }
+    
+    private func showBackPage() {
+        withAnimation(.easeInOut(duration: 0.5)) {
+            switch onboardingStep {
+            case .introduction:
+                onboardingStep = .introduction
+            case .genderQuestions:
+                onboardingStep = .introduction
+            case .workoutQuestions:
+                onboardingStep = .genderQuestions
+            case .socialQuestions:
+                onboardingStep = .workoutQuestions
+            case .longTermResults:
+                onboardingStep = .socialQuestions
+            }
+        }
+    }
 
     private func vibration() {
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.prepare()
-        generator.impactOccurred()
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
+    
+//    private func nextStep() {
+//        withAnimation(.easeInOut(duration: 0.3)) {
+//            if let nextIndex = OnboardingStep.allCases.firstIndex(of: onboardingStep)?.advanced(by: 1),
+//               nextIndex < OnboardingStep.allCases.count {
+//                onboardingStep = OnboardingStep.allCases[nextIndex]
+//            } else {
+//                completionHandler()
+//            }
+//        }
+//        
+//        vibration()
+//    }
+//    
+//    private func previousStep() {
+//        withAnimation(.easeInOut(duration: 0.3)) {
+//            if let previousIndex = OnboardingStep.allCases.firstIndex(of: onboardingStep)?.advanced(by: -1),
+//               previousIndex >= 0 {
+//                onboardingStep = OnboardingStep.allCases[previousIndex]
+//            }
+//        }
+//    }
 }
 
 #Preview {
