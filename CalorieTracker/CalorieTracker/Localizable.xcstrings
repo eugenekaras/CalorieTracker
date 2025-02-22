@@ -1,7 +1,25 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     " " : {
+
+    },
+    "%lld cm" : {
+
+    },
+    "%lld ft" : {
+
+    },
+    "%lld in" : {
+
+    },
+    "%lld kg" : {
+
+    },
+    "%lld lb" : {
 
     },
     "0-2" : {
@@ -14,22 +32,103 @@
 
     },
     "A few workouts per week" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qualche allenamento a settimana"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haftada birkaç antrenman"
+          }
+        }
+      }
     },
     "and" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ve"
+          }
+        }
+      }
     },
     "By continuing you agree to Cal AI's" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuando accetti i termini e le condizioni di Cal AI"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devam ederek Cal AI'nın"
+          }
+        }
+      }
     },
     "Continue with email" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continua con l'email"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-postayla devam et"
+          }
+        }
+      }
     },
     "Dedicated athlete" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atleta dedicato"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adanmış sporcu"
+          }
+        }
+      }
     },
     "Facebook" : {
 
+    },
+    "Feet" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Piedi"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayak"
+          }
+        }
+      }
     },
     "Female" : {
       "localizations" : {
@@ -104,6 +203,76 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cinsiyetinizi seçin"
+          }
+        }
+      }
+    },
+    "Height" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altezza"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yükseklik"
+          }
+        }
+      }
+    },
+    "height_and_weight_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Height & weight"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altezza e peso"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boy & kilo"
+          }
+        }
+      }
+    },
+    "Imperial" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imperiale"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İmparatorluk"
+          }
+        }
+      }
+    },
+    "Inches" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pollici"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İnç"
           }
         }
       }
@@ -288,7 +457,26 @@
       }
     },
     "long_term_results_title" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cal AI creates long-term results"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cal AI crea risultati a lungo termine"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cal AI uzun vadeli sonuçlar yaratır"
+          }
+        }
+      }
     },
     "Male" : {
       "localizations" : {
@@ -302,6 +490,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Erkek"
+          }
+        }
+      }
+    },
+    "Metric" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metrico"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metrik"
           }
         }
       }
@@ -348,22 +552,103 @@
 
     },
     "Privacy Policy" : {
-
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gizlilik Politikası"
+          }
+        }
+      }
     },
     "Sign In" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registrazione"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oturum aç"
+          }
+        }
+      }
     },
     "Sign in with Apple" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accedi con Apple"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple ile oturum açın"
+          }
+        }
+      }
     },
     "Sign in with Google" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accedi con Google"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Google ile oturum açın"
+          }
+        }
+      }
+    },
+    "social_question_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Where did you hear about us?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dove hai sentito parlare di noi?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bizi nereden duydunuz?"
+          }
+        }
+      }
     },
     "SplashView" : {
 
     },
     "Terms and Conditions" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Termini e Condizioni"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şartlar ve koşullar"
+          }
+        }
+      }
     },
     "There we go!" : {
       "localizations" : {
@@ -384,14 +669,81 @@
     "TikTok" : {
 
     },
+    "Weight" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peso"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ağırlık"
+          }
+        }
+      }
+    },
     "workout_question_subtitle" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This will be used to calibrate your custom plan"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo verrà utilizzato per calibrare il tuo piano personalizzato"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu, özel planınızı kalibre etmek için kullanılacaktır"
+          }
+        }
+      }
     },
     "workout_question_title" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How many workouts do you do per week?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quanti allenamenti fai alla settimana?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haftada kaç antrenman yapıyorsunuz?"
+          }
+        }
+      }
     },
     "Workouts now and then" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allenamenti di tanto in tanto"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arada sırada egzersizler"
+          }
+        }
+      }
     },
     "Youtube" : {
 

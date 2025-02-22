@@ -14,6 +14,7 @@ extension OnboardingView {
         case workoutQuestions
         case socialQuestions
         case longTermResults
+        case heightAndWeight
     }
 }
 
@@ -28,6 +29,7 @@ struct OnboardingView: View {
     @State private var genderQuestion: GenderQuestion?
     @State private var workoutQuestion: WorkoutQuestion?
     @State private var socialQuestion: SocialQuestion?
+    @State private var heightWeightData: HeightWeightData?
     
     //MARK: - Callbacks
     let completionHandler: () -> Void
@@ -49,6 +51,8 @@ struct OnboardingView: View {
             return socialQuestion != nil
         case .longTermResults:
             return true
+        case .heightAndWeight:
+            return heightWeightData != nil
         }
     }
     
@@ -71,6 +75,8 @@ struct OnboardingView: View {
                     socialQuestionsView
                 case .longTermResults:
                     longTermResultsView
+                case .heightAndWeight:
+                    heightAndWeightView
                 }
             }
 
@@ -217,8 +223,8 @@ struct OnboardingView: View {
     
     private var socialQuestionsView: some View {
         QuestionsView(
-            title: "workout_question_title",
-            subTitle: "workout_question_subtitle"
+            title: "social_question_title",
+            subTitle: nil
         ) {
             SocialQuestionView(selectedQuestion: $socialQuestion)
         }
@@ -236,6 +242,17 @@ struct OnboardingView: View {
         }
     }
     
+    private var heightAndWeightView: some View {
+        QuestionsView(
+            title: "height_and_weight_title",
+            subTitle: nil
+        ) {
+            HeightAndWeightPickerView(data: $heightWeightData)
+        }
+    }
+    
+    
+    
     //MARK: - Actions
     private func showNextPage() {
         withAnimation(.easeInOut(duration: 0.5)) {
@@ -249,6 +266,8 @@ struct OnboardingView: View {
             case .socialQuestions:
                 onboardingStep = .longTermResults
             case .longTermResults:
+                onboardingStep = .heightAndWeight
+            case .heightAndWeight:
                 completionHandler()
             }
         }
@@ -269,6 +288,8 @@ struct OnboardingView: View {
                 onboardingStep = .workoutQuestions
             case .longTermResults:
                 onboardingStep = .socialQuestions
+            case .heightAndWeight:
+                onboardingStep = .longTermResults
             }
         }
     }
@@ -276,28 +297,6 @@ struct OnboardingView: View {
     private func vibration() {
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
-    
-//    private func nextStep() {
-//        withAnimation(.easeInOut(duration: 0.3)) {
-//            if let nextIndex = OnboardingStep.allCases.firstIndex(of: onboardingStep)?.advanced(by: 1),
-//               nextIndex < OnboardingStep.allCases.count {
-//                onboardingStep = OnboardingStep.allCases[nextIndex]
-//            } else {
-//                completionHandler()
-//            }
-//        }
-//        
-//        vibration()
-//    }
-//    
-//    private func previousStep() {
-//        withAnimation(.easeInOut(duration: 0.3)) {
-//            if let previousIndex = OnboardingStep.allCases.firstIndex(of: onboardingStep)?.advanced(by: -1),
-//               previousIndex >= 0 {
-//                onboardingStep = OnboardingStep.allCases[previousIndex]
-//            }
-//        }
-//    }
 }
 
 #Preview {

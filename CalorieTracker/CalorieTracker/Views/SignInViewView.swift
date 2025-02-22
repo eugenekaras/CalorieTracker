@@ -92,10 +92,6 @@ struct SignInViewView: View {
             .frame(height: 53)
             .background(Color.button.signInt)
             .cornerRadius(70)
-//            .overlay {
-//                RoundedRectangle(cornerRadius: 70)
-//                    .fill(Color.button.signInt)
-//            }
         }
     }
     

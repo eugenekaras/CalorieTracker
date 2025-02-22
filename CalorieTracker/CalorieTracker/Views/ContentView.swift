@@ -19,8 +19,8 @@ extension ContentView {
 struct ContentView: View {
     
     //MARK: - States
-//    @AppStorage("isOnboardingCompleted") private var isOnboardingCompleted: Bool = false
-    @State private var isOnboardingCompleted: Bool = false
+    @AppStorage("isOnboardingCompleted") private var isOnboardingCompleted: Bool = false
+//    @State private var isOnboardingCompleted: Bool = false
     @State private var contentType: ContentType = .splashView
     @State private var paywallNeedToBeShown: Bool = true
     

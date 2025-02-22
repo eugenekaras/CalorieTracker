@@ -65,3 +65,14 @@ enum SocialQuestion: LocalizedStringKey, SelectableQuestion {
         }
     }
 }
+
+enum UnitSystem {
+    case imperial
+    case metric
+}
+
+struct HeightWeightData {
+    var unitSystem: UnitSystem
+    var height: Double // In cm for metric and in inches for imperial
+    var weight: Double // In kg for metric and in pounds for imperial
+}
